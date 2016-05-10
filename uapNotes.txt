@@ -1,0 +1,111 @@
+Notes and TODOS:
+
+
+- Examples of final UAP projects?
+
+- parameters
+- filter function
+- printing function
+
+--------------------------------------------------------------------------------------------------------------------
+4/4: Monday meeting ------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+Goals for next time:
+- play around with Bootstrap and start making a webpage
+- restart with just JS
+- ajax calls, JSON, JQuery
+
+
+--------------------------------------------------------------------------------------------------------------------
+3/7: Monday meeting ------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+Goals for next time:
+- change so that semester number does not have to match
+- create a semseter number so that if they want to make sure they are only looking at studens who have tajen those classes before  aparticular semester. Bu this is optional...
+- create a basic UI to have users play with
+- write out scenarios / user study thing
+
+Outstanding TODOS:
+
+- TODO: how to deal with people who take time off.....
+- TODO: testing
+- TODO: lots of docstrings...
+- TODO: need to be passing dictionaries all the time?  ---> yes I do because enrollment might be helpful
+- TODO: check if joints works as expected
+
+
+Progress:
+- updated docstrings
+- made it so semester numbers do not have to match
+- can put in a semester number or not
+- downloaded node.js and started playing around
+- I am going to have to transfer my code over to JS
+
+
+--------------------------------------------------------------------------------------------------------------------
+2/29: Monday meeting -----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+Goals for next time:
+- giving people roadmaps both general based on filters at the top, give roadmap of top 5 courses for each semester
+- peopel can fill out as like them, courses they have taken and by what semster they have gotten to
+- think about questions that i can answer --> user studies 
+
+Progress:
+- got top 5 courses for each semester based on an enrollment dictionary (enrollment dictionary can have different filters, so filters are applied earlier)
+- based on classes a user puts in... (use raw_input), then you only see students that fit that description and then you can display the popularity dictionary for it
+
+Outstanding TODOS:
+
+- TODO: how to deal with people who take time off.....
+- Do I need unit testing? to make sure that my numbers mean what they mean?
+	I have been careful, but should I confirm with permanent unit tests
+- TODO: lots of docstrings...
+- TODO: need to be passing dictionaries all the time?
+- Clean up code/make more efficient?
+
+- Come up with a user study and make code user study friendly...
+
+
+--------------------------------------------------------------------------------------------------------------------
+2/27: --------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+Filtering and Cleaning Data TODOs:
+
+TODO: test if 6 + 6-P should be included?
+TODO: should we include M and D?
+TODO: how to deal with people who take time off.....
+
+
+???????: Do I need unit testing? to make sure that my numbers mean what they mean?
+	I have been careful, but should I confirm with permanent unit tests
+
+ - lumped some HASS classes together --> can continue to break it down...
+
+"""
+1. with given filters removing students, create matrix
+2. lump HASS classes together (?) 
+3. please send me an email of the J courses (lump cross-registered subjects)
+4. what math/econ/business classes have course 6 students taken? [drop-down menu]
+"""
+
+What I did:
+1. refined data set
+2. created dictionary for enrollment --> (course, semester): enrollment
+3. created funtions to filter in or out courses with particular prefixes (ie 6, 14, CMS, etc.)
+4. created function to remove the non course 6 classes in jointly registered classes
+
+TBD...
+1. inculde 6 and 6-P --> no
+2. how to deal with time off people... --> 
+3. is there a way to verify I have "all" or the "right number" of students?
+4. lots of docstrings....
+5. do I need to be passing in dictionaries all the time?
+6. make verification for joint_map function
+
+Looking Forward:
+- what questions am I trying to answer?
+- should I play with plugging things in and tracking them, so that I can start to see what patterns emerge?
