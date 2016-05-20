@@ -81,9 +81,27 @@ def filter_in_courses_given_prefix(dictionary, prefix):
 			d[item] = dictionary[item]
 	return d
 
-students67 = filter_students_by_major(students, "6-1")
+def check_previous(courses, previous, semester):
+   count = 0
+   for c in courses:
+      if c[0] in previous and c[1]<= semester:
+         count+=1
+   if count == len(previous): return True
+   else: return False
 
-courses = course_popularity_dictionary(students67)
+def filter_students_based_on_previous_courses(students, previous, semester = 406):
+   s = students[:]
+   for student in students:
+      if not check_previous(student[1:], previous, semester):
+         s.remove(student)
+   return s
+
+# students67 = filter_students_by_major(students, "6-3")
+allie = filter_students_based_on_previous_courses(students, ["6.857", "6.858"])
+print len(allie)
+
+
+courses = course_popularity_dictionary(allie)
 filtered = filter_in_courses_given_prefix(courses, "6")
 
 # find the top 10 most popular classes
