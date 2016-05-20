@@ -11,10 +11,10 @@ var me = function(){
     	// parameters = adjust_params(user_input);
         // $('#serializearray').text(        
         //     JSON.stringify(user_input));
-    // };
+    //  
     update();
     $('form').change(update);
-})
+}});
 	function setup(){
 		$.ajax('all.json', {
 			dataType: "json",

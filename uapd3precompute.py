@@ -81,7 +81,7 @@ def filter_in_courses_given_prefix(dictionary, prefix):
 			d[item] = dictionary[item]
 	return d
 
-students67 = filter_students_by_major(students, "6-7")
+students67 = filter_students_by_major(students, "6-1")
 
 courses = course_popularity_dictionary(students67)
 filtered = filter_in_courses_given_prefix(courses, "6")
@@ -161,8 +161,8 @@ for m in xrange(len(names)):
          continue
 
 final = {"nodes":nodes, "links": links}
-# print final
+print final
 
-with open('67.json', 'w') as outfile:
-    json.dump(final, outfile)
+# with open('67.json', 'w') as outfile:
+#     json.dump(final, outfile)
 
